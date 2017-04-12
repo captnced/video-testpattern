@@ -1,0 +1,1 @@
+ffmpeg -f image2 -i png_files/mire%04d.png -i ticksLR.m4a -vf "drawtext=fontfile=DroidSansMono.ttf: timecode='09\:57\:00\:00': r=25: x=(w-tw)/2: y=h-(2*lh): fontcolor=white: box=1: boxcolor=0x00000099" -r 25 -c:v h264 -vb 15000k -ab 256k -c:a aac -strict -2 -shortest mire-timecode.mp4
